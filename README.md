@@ -1,2 +1,2 @@
 # intelloClean2
-Android apllication developement Sem 7
+Android application developement Sem 7
