@@ -1,4 +1,4 @@
-package varun.exynosynergy.intelloclean;
+package varun.exynosynergy.uploadexample;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("varun.exynosynergy.intelloclean", appContext.getPackageName());
+        assertEquals("varun.exynosynergy.uploadexample", appContext.getPackageName());
     }
 }

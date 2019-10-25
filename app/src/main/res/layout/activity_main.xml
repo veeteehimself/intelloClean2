@@ -1,71 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:background="@drawable/background2">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_marginTop="60dp"
-        app:srcCompat="@drawable/logo"/>
-
-    <EditText
-        android:id="@+id/edittext_username"
-        android:layout_width="190dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="30dp"
-        android:paddingLeft="2dp"
-        android:background="#d2ffd2"
-        android:drawableLeft="@drawable/user3"
-        android:hint="@string/username"
-        android:textColorHint="#1A010D" />
-
-    <EditText
-        android:id="@+id/edittext_password"
-        android:layout_width="190dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="#d2ffd2"
-        android:drawableLeft="@drawable/pass2"
-        android:hint="@string/password"
-        android:textColorHint="#1A010D" />
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button_login"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="#1080ff"
-        android:text="@string/login"/>
-
-    <LinearLayout
+        android:id="@+id/button_choose_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:text="Choose file" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:text="@string/not_registered"
-            android:textColor="#FDFCFC"
-            android:textColorHint="#F1EDED" />
+    <EditText
+        android:id="@+id/edit_text_file_name"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toEndOf="@+id/button_choose_image"
+        android:hint="Enter file name" />
 
-        <TextView
-            android:id="@+id/textview_register"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:paddingLeft="10dp"
-            android:text="@string/register_here"
-            android:textSize="16dp"
-            android:textColor="#1080ff"
-            android:textStyle="bold" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="377dp"
+        android:layout_height="339dp"
+        android:layout_above="@+id/progress_bar"
+        android:layout_below="@id/edit_text_file_name"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="40dp" />
 
-</LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_upload"
+        android:layout_marginBottom="48dp" />
+
+    <Button
+        android:id="@+id/button_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/image_view"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="450dp"
+        android:gravity="center_horizontal"
+        android:text="Upload" />
+
+    <TextView
+        android:id="@+id/text_view_show_uploads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button_upload"
+        android:layout_alignTop="@+id/button_upload"
+        android:layout_alignBottom="@+id/button_upload"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:text="Show Uploads"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

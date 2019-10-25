@@ -1,4 +1,4 @@
-package varun.exynosynergy.intelloclean;
+package varun.exynosynergy.uploadexample;
 
 import org.junit.Test;
 
